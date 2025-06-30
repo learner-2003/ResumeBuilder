@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Interactive Resume Builder</h1>
+
+  <div id="templateButtons">
+    <button type="button" data-template="classic">Classic</button> 
+    <button type="button" data-template="modern">Modern</button>
+    <button type="button" data-template="minimal">Minimal</button>
+  </div>
+
+  <div class="container">
+    <form id="resumeForm">
+      <h2>Enter Your Details</h2>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="career">Career Objective:</label>
+      <textarea id="career" name="career" rows="3"></textarea>
+
+      <label for="education">Education:</label>
+      <textarea id="education" name="education" rows="3"></textarea>
+
+      <label for="projects">Projects:</label>
+      <textarea id="projects" name="projects" rows="3"></textarea>
+
+      <label for="certifications">Certifications:</label>
+      <textarea id="certifications" name="certifications" rows="3"></textarea>
+
+      <label for="skills">Skills:</label>
+      <textarea id="skills" name="skills" rows="3"></textarea>
+
+      <label for="experience">Experience:</label>
+      <textarea id="experience" name="experience" rows="3"></textarea>
+
+      <label for="languages">Languages Known:</label>
+      <textarea id="languages" name="languages" rows="3"></textarea>
+
+      <button type="button" id="downloadBtn">Download PDF</button>
+    </form>
+
+    <div class="resume classic">
+      <h2>Live Resume Preview</h2>
+      <div id="preview">
+        <p><strong>Name:</strong> <span id="previewName"></span></p>
+        <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+        <p><strong>Career Objective:</strong> <span id="previewCareer"></span></p>
+        <p><strong>Education:</strong> <span id="previewEducation"></span></p>
+        <p><strong>Projects:</strong> <span id="previewProjects"></span></p>
+        <p><strong>Certifications:</strong> <span id="previewCertifications"></span></p>
+        <p><strong>Skills:</strong> <span id="previewSkills"></span></p>
+        <p><strong>Experience:</strong> <span id="previewExperience"></span></p>
+        <p><strong>Languages Known:</strong> <span id="previewLanguages"></span></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
